@@ -1,7 +1,6 @@
 import { IClientOptions } from 'mqtt';
 
 export interface ConnectionOptions extends IClientOptions {
-  initConnect: boolean;
   brokerUrl: string;
 }
 

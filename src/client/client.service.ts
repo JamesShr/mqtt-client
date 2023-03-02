@@ -32,14 +32,11 @@ export class ClientServiceImpl implements ClientService {
       {},
       {
         brokerUrl: 'mqtt://localhost:1883',
-        initConnect: true,
         clientId: `client:${Date.now()}`,
       },
       options,
     );
-    if (this.connectOption.initConnect) {
-      this.connect();
-    }
+    this.connect();
   }
 
   public async publish(packet: PublishPacket): Promise<void> {
